@@ -5,7 +5,8 @@
     var $messages = $messages;
  
     socket.addEvent('message', function(message) {
-      $messages.prepend("<div class='message'>" + message + "</div>");
+      var tweet = JSON.parse(message)
+      $messages.prepend("<div class='message'><span class='username'>@" + tweet.name + ":</span> " + tweet.text + "</div>");
       $('.message').first().slideDown('slow');
     });
  } 

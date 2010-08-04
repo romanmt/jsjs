@@ -29,7 +29,11 @@ app.set('reload views', 1000);
 twit.headers['User-Agent'] = 'jersey shore node';
 
 twit.addListener('tweet', function(tweet){
-    socket.broadcast("@" + tweet.user.screen_name + " : " + tweet.text);
+    socket.broadcast(
+      JSON.stringify(
+        { name: tweet.user.screen_name,
+          text: tweet.text
+        }));
 }).stream();
 
 app.get('/', function(req, res, next) {

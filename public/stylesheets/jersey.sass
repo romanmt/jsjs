@@ -1,21 +1,52 @@
-!blue = #547CCA
-!aqua = #45C4BA
-!green = #7DCB73
-!orange = #94470B
+!blue = #00CCFF
+!yellow = #FFCC00
+!pink = #FF33FF
+!gray = #333333
 
 body
-  :padding 50px 80px
+  :background-color !gray
+  :padding 0
+  :margin 0
   :font 18px "Verdana", "Geneva", sans-serif
-  :background !blue
+
+p
+  :margin 0
+  :padding 0
+
+img
+  :border none
+  :padding 0
 
 h1
-  :background white
-  :color !orange
+  :color white
+
+#title
+  :text-align center
+  :font 36px "Verdana", "Geneva", sans-serif
+  :padding-top 72px
+  :color !blue
+
+#wrapper
+  :background-image url('/images/bg_map.png')
+  :background-repeat no-repeat
+  :width 900px
+  :height 700px
+  :margin 0 0
 
 #messages
+  :margin-left 108px
   .message
+    :color white
     :display none
     :margin 5px
-    :background !aqua 
+      .username
+        :color !yellow
 
-
+#shades
+  :background-image url('/images/sunglasses.png')
+  :background-repeat no-repeat
+  :width 201px
+  :height 113px
+  :position fixed
+  :left 900px
+  :top 700px

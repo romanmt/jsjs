@@ -10,7 +10,7 @@ var creds = JSON.parse(fs.readFileSync('./config/twitter.json'));
 var twit = new TwitterNode(
     {   user:     creds[0],
         password: creds[1],
-        track:    ['jersey shore', 'snookie'],
+        track:    ['jersey shore', 'snookie', '#jersey_shore', '#jerseyshore'],
         follow:   [28638191, 95938476, 111690277, 93935921]
     });
 

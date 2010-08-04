@@ -1,0 +1,13 @@
+body {
+  padding: 50px 80px;
+  font: 18px "Verdana", "Geneva", sans-serif;
+  background: #547CCA;}
+
+h1 {
+  background: white;
+  color: #94470B;}
+
+#messages .message {
+  display: none;
+  margin: 5px;
+  background: #45C4BA ;}

@@ -1,0 +1,14 @@
+%script{ type: 'text/javascript', src: '/js/Socket.IO/socket.io.js' }
+%script{ type: "text/javascript", src: "/js/node_client.js" }
+
+:javascript
+  io.setPath('/js/Socket.IO/')
+
+:javascript
+  var ioClient = null;
+  $(function() {
+    ioClient = new IoClient("localhost", $("#messages"));
+  });
+  
+%h1 Welcome to the live Jersey Shore twitter feed.
+#messages
